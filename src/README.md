@@ -1,1 +1,0 @@
-![caputre](capure.png)
