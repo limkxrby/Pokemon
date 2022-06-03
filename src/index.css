@@ -1,13 +1,110 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EEE;
+}
+
+
+.app-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+
+.title {
+  color: #171717;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 1900;
+  line-height: 1;
+  padding: 1px;
+  letter-spacing: 0.2em;
+}
+
+.pokedex {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  overflow: scroll;
+  width: 100%;
+}
+
+.wild-pokemon {
+  min-height: 300px;
+ 
+  padding: 15px;
+}
+.wild-pokemon h2 {
+  color: gray;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+
+.wild-pokemon .sprite {
+  display: block;
+  width: 350px;
+  margin: 0px auto;
+}
+
+
+.card .pokemon .remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  background: rgb(141, 131, 131);
+  color: #F3F3F3;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.wild-pokemon .catch-btn {
+  width: 200px;
+  height: 35px;
+  display: block;
+  margin: 25px auto;
+  background: #FFCE00;
+  border: none;
+  outline: none;
+  color: #171717;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12%, 1fr));
+  grid-gap: 20px;
+  margin: 5px;
+}
+
+.card .pokemon {
+  position:relative;
+  display: flex;
+  flex-flow: column;
+
+  padding: 15px;
+  background: #F3F3F3;
 }
